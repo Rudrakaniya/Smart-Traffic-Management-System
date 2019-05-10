@@ -2,6 +2,7 @@
 #include <fstream>
 #include <chrono> //for delay
 #include <stdlib.h>
+#include<ctime>
 
 
 // ***** Smart Traffic Management Solution *****
@@ -21,28 +22,52 @@ class SmartTrafficManagementSystem{
 
 
 public:
+    
     int welcome()
     {
         system("clear");
 
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Press Your Option :-                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        1.Record of Vehicles                               *"<<endl;
-        cout<<"*        2.Record of Challan                                *"<<endl;
-        cout<<"*        3.Search the Record of Vehicles                    *"<<endl;
-        cout<<"*        4.Traffic Control Booths                           *"<<endl;
-        cout<<"*        5.Control the Traffic                              *"<<endl;
-        cout<<"*        6.Help !                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        time_t tt;
+        struct tm * ti;
+        time (&tt);
+        ti = localtime(&tt);
+
+        cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<"                                                     " <<asctime(ti);
+        delay1();
+
+        system("clear");
+
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                          WELCOME TO                                                             '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                SMART TRAFFIC MANAGEMENT SYSTEM                                                  '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                   Press Your Option :-                                                                                          '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                    1.Record of Vehicles                                                                         '**"<<endl;
+        cout<<"**'                                    2.Record of Challan                                                                          '**"<<endl;
+        cout<<"**'                                    3.Search the Record of Vehicles                                                              '**"<<endl;
+        cout<<"**'                                    4.Traffic Control Booths                                                                     '**"<<endl;
+        cout<<"**'                                    5.Control the Traffic                                                                        '**"<<endl;
+        cout<<"**'                                    6.Help !                                                                                     '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                   Enter your choice __                                                                                          '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+
 
         int choice{0};
         cin>>choice;
@@ -99,26 +124,48 @@ public:
         sleep_for(nanoseconds(1000000));
         sleep_until(system_clock::now() + seconds(1));
     }
+    int delay1()
+    {
+        using namespace std::this_thread; // sleep_for, sleep_until
+        using namespace std::chrono; // nanoseconds, system_clock, seconds
+
+        sleep_for(nanoseconds(1000000000));
+        sleep_until(system_clock::now() + seconds(1));
+    }
+    int delay2()
+    {
+        using namespace std::this_thread; // sleep_for, sleep_until
+        using namespace std::chrono; // nanoseconds, system_clock, seconds
+
+        sleep_for(nanoseconds(100000000));
+        sleep_until(system_clock::now() + seconds(1));
+    }
     int recOfVeh()
     {
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                  * Record of Vehicles *                   *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Press Your Option :-                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        1. Add a New Vehicle                               *"<<endl;
-        cout<<"*        2. Search a Vehicle Using registration number      *"<<endl;
-        cout<<"*        3. Search a Vehicle Using Name of the owner        *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter 0 For Home                                         *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                            WELCOME TO                                                               *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                  SMART TRAFFIC MANAGEMENT SYSTEM                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                      * Record of Vehicles *                                                         *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Press Your Option :-                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                      1. Add a New Vehicle                                                                           *"<<endl;
+        cout<<"*                                      2. Search a Vehicle Using registration number                                                  *"<<endl;
+        cout<<"*                                      3. Search a Vehicle Using Name of the owner                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Enter 0 For Home                                                                                                *"<<endl;
+        cout<<"*                     Enter your choice __                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
 
         int ROVChoice{0};
         cin>>ROVChoice;
@@ -146,13 +193,14 @@ public:
     }
     int recOfVeh_1()
     {
+        system("clear");
         fstream fio;
         string line;
         cout << "                    Welcome to Registration of Vehicles\n"<<endl;
         cout<<"Enter Registration number of the Vehicle in the first line "<<endl;
         cout<<"Enter Name of the owner in the second line "<<endl;
         cout<<endl<<"Enter './' to Exit ";
-        fio.open("RecordOfVehicles.txt", ios::app | ios::out | ios::in);
+        fio.open("/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfVehicles.txt", ios::app | ios::out | ios::in);
 
         // Execute a loop If file successfully Opened
         while (fio) {
@@ -177,7 +225,8 @@ public:
 
     int recOfVeh_2()
     {
-        string path = "RecordOfVehicles.txt";
+        system("clear");
+        string path = "/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfVehicles.txt";
         ifstream file( path.c_str() );
 
         if( file.is_open() )
@@ -195,15 +244,15 @@ public:
                 if( word == candidate ) ++countwords ;
             }
             if (countwords > 0){
-            cout << "The registration number " << word << "' has been found in our records."<<endl ;
+                cout << "The registration number " << word << "' has been found in our records."<<endl ;
 
-            int choice;
-            cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
-            cin>>choice;
-            if (choice ==1)
-                welcome();
-            else
-                recOfVeh_2();
+                int choice;
+                cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
+                cin>>choice;
+                if (choice ==1)
+                    welcome();
+                else
+                    recOfVeh_2();
 
             }
             else{
@@ -214,7 +263,7 @@ public:
                 if (choice ==1)
                     welcome();
                 else
-                recOfVeh_2();
+                    recOfVeh_2();
             }
         }
 
@@ -231,8 +280,9 @@ public:
 
     int recOfVeh_3()
     {
+        system("clear");
 
-        string path = "RecordOfVehicles.txt";
+        string path = "/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfVehicles.txt";
         ifstream file( path.c_str() );
 
         if( file.is_open() )
@@ -285,24 +335,30 @@ public:
 
     int recOfChall()
     {
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                   * Record of Challan *                   *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Press Your Option :-                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        1. Add a New Challan                               *"<<endl;
-        cout<<"*        2. Search a Challan Using registration number      *"<<endl;
-        cout<<"*        3. Search a Challan Using Name of the owner        *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter 0 For Home                                         *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                            WELCOME TO                                                               *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                  SMART TRAFFIC MANAGEMENT SYSTEM                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                      * Record of Challan *                                                          *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Press Your Option :-                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                      1. Add a New Challan                                                                           *"<<endl;
+        cout<<"*                                      2. Search a Challan Using registration number                                                  *"<<endl;
+        cout<<"*                                      3. Search a Challan Using Name of the owner                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Enter 0 For Home                                                                                                *"<<endl;
+        cout<<"*                     Enter your choice __                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
 
         int ROCChoice{0};
         cin>>ROCChoice;
@@ -333,6 +389,7 @@ public:
     int recOfChall_1()
     {
 
+        system("clear");
         fstream fio;
         string line;
 
@@ -341,7 +398,7 @@ public:
         cout<<"Enter Registration number of the Vehicle in the first line "<<endl;
         cout<<"Enter Name of the owner in the second line "<<endl;
         cout<<endl<<"Enter './' to Exit ";
-        fio.open("RecordOfChallan.txt", ios::app | ios::out | ios::in);
+        fio.open("/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfChallan.txt", ios::app | ios::out | ios::in);
 
         // Execute a loop If file successfully Opened
         while (fio) {
@@ -368,7 +425,8 @@ public:
     int recOfChall_2()
     {
 
-        string path = "RecordOfChallan.txt";
+        system("clear");
+        string path = "/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfChallan.txt";
         ifstream file( path.c_str() );
 
         if( file.is_open() )
@@ -420,7 +478,8 @@ public:
 
     int recOfChall_3()
     {
-        string path = "RecordOfChallan.txt";
+        system("clear");
+        string path = "/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfChallan.txt";
         ifstream file( path.c_str() );
 
         if( file.is_open() )
@@ -472,71 +531,77 @@ public:
 
     int vehSearch()
     {
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*             * Search the Record of Vehicles *             *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*           Enter The Vehicles Registration Number          *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter 0 For Home                                         *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                            WELCOME TO                                                               *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                  SMART TRAFFIC MANAGEMENT SYSTEM                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                 * Search the Record of Vehicles *                                                   *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                               Enter The Vehicles Registration Number                                                *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Enter 0 For Home                                                                                                *"<<endl;
+        cout<<"*                     Enter your choice __                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
 
 
-            string path = "RecordOfVehicles.txt";
-            ifstream file( path.c_str() );
+        string path = "/home/lamecodes/CLionProjects/untitled/cmake-build-debug/RecordOfVehicles.txt";
+        ifstream file( path.c_str() );
+        system("clear");
 
+        if( file.is_open() )
+        {
 
-            if( file.is_open() )
+            string word ;
+            cin >> word ;
+
+            int countwords = 0 ;
+            string candidate ;
+            while( file >> candidate ) // for each candidate word read from the file
             {
-
-                string word ;
-                cin >> word ;
-
-                int countwords = 0 ;
-                string candidate ;
-                while( file >> candidate ) // for each candidate word read from the file
-                {
-                    if( word == candidate ) ++countwords ;
-                }
-                if (countwords > 0){
-                    cout << "The registration number " << word << "' has been found in our records."<<endl ;
-
-                    int choice;
-                    cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
-                    cin>>choice;
-                    if (choice ==1)
-                        welcome();
-                    else
-                        vehSearch();
-                }
-                else{
-                    cout<<"Registration number does not foud !!";
-                    int choice;
-                    cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
-                    cin>>choice;
-                    if (choice ==1)
-                        welcome();
-                    else
-                        vehSearch();
-                }
+                if( word == candidate ) ++countwords ;
             }
-            else
-            {
-                cerr << "Error! 401!\n" ;
-                delay();
-                welcome();
+            if (countwords > 0){
+                cout << "The registration number " << word << "' has been found in our records."<<endl ;
 
+                int choice;
+                cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
+                cin>>choice;
+                if (choice ==1)
+                    welcome();
+                else
+                    vehSearch();
             }
+            else{
+                cout<<"Registration number does not foud !!";
+                int choice;
+                cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
+                cin>>choice;
+                if (choice ==1)
+                    welcome();
+                else
+                    vehSearch();
+            }
+        }
+        else
+        {
+            cerr << "Error! 401!\n" ;
+            delay();
+            welcome();
+
+        }
 
 
 
@@ -548,24 +613,30 @@ public:
 
         // Traffic Control Booths
 
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                * Traffic Control Booths *                 *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Press Your Option :-                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        1. Jalandhar Traffic Control Booth                 *"<<endl;
-        cout<<"*        2. Amritsar Traffic Control Booth                  *"<<endl;
-        cout<<"*        3. Chandigarh Traffic Control Booth                *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter 0 For Home                                         *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                            WELCOME TO                                                               *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                  SMART TRAFFIC MANAGEMENT SYSTEM                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                     * Traffic Control Booths *                                                      *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Press Your Option :-                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                      1. Jalandhar Traffic Control Booth                                                             *"<<endl;
+        cout<<"*                                      2. Amritsar Traffic Control Booth                                                              *"<<endl;
+        cout<<"*                                      3. Chandigarh Traffic Control Booth                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Enter 0 For Home                                                                                                *"<<endl;
+        cout<<"*                     Enter your choice __                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
 
         int TCBChoice{0};
         cin>>TCBChoice;
@@ -650,24 +721,30 @@ public:
     {
         //Helpline Information and nearby hospitals
 
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
-        cout<<"*                        WELCOME TO                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*              SMART TRAFFIC MANAGEMENT SYSTEM              *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        * Helpline Information And Nearby Hospitals *      *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Press Your Option :-                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*        1. Helpline Number                                 *"<<endl;
-        cout<<"*        2. Hospitals in Amritsar                           *"<<endl;
-        cout<<"*        3. Hospitals in Chandigarh                         *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<"*  Enter 0 For Home                                         *"<<endl;
-        cout<<"*  Enter your choice __                                     *"<<endl;
-        cout<<"*                                                           *"<<endl;
-        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                            WELCOME TO                                                               *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                  SMART TRAFFIC MANAGEMENT SYSTEM                                                    *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                             * Helpline Information And Nearby Hospitals *                                           *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Press Your Option :-                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                      1. Helpline Number                                                                             *"<<endl;
+        cout<<"*                                      2. Hospitals in Amritsar                                                                       *"<<endl;
+        cout<<"*                                      3. Hospitals in Chandigarh                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                     Enter 0 For Home                                                                                                *"<<endl;
+        cout<<"*                     Enter your choice __                                                                                            *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<"*                                                                                                                                     *"<<endl;
+        cout<<">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"<<endl;
 
         int CTTChoice{0};
         cin>>CTTChoice;
@@ -680,7 +757,7 @@ public:
             case 1: {
                 system("clear");
                 string line;
-                ifstream myfile("HelpNumbers.txt");
+                ifstream myfile("/home/lamecodes/CLionProjects/untitled/cmake-build-debug/HelpNumbers.txt");
                 if (myfile.is_open()) {
                     while (getline(myfile, line)) {
                         cout << line << '\n';
@@ -709,7 +786,7 @@ public:
 
                 system("clear");
                 string line;
-                ifstream myfile("HAmritsar.txt");
+                ifstream myfile("/home/lamecodes/CLionProjects/untitled/cmake-build-debug/HAmritsar.txt");
                 if (myfile.is_open()) {
                     while (getline(myfile, line)) {
                         cout << line << '\n';
@@ -739,7 +816,7 @@ public:
 
                 system("clear");
                 string line;
-                ifstream myfile("HChandigarh.txt");
+                ifstream myfile("/home/lamecodes/CLionProjects/untitled/cmake-build-debug/HChandigarh.txt");
                 if (myfile.is_open()) {
                     while (getline(myfile, line)) {
                         cout << line << '\n';
@@ -781,5 +858,5 @@ int main()
     SmartTrafficManagementSystem ob1;
     ob1.welcome();
 
-    //all rights reserved  ©rudrakaniya || CSEBaba 
+    //all rights reserved  ©rudrakaniya || CSEBaba
 }
