@@ -44,7 +44,7 @@ public:
         cout<<"**'                                                          WELCOME TO                                                             '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                SMART TRAFFIC MANAGEMENT SYSTEM                                                  '**"<<endl;
-        cout<<std"**'                                                                                                                                 '**"<<endl;
+        cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
