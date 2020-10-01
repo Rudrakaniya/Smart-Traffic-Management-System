@@ -44,7 +44,7 @@ public:
         cout<<"**'                                                          WELCOME TO                                                             '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                SMART TRAFFIC MANAGEMENT SYSTEM                                                  '**"<<endl;
-        cout<<"**'                                                                                                                                 '**"<<endl;
+        cout<<std"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
         cout<<"**'                                                                                                                                 '**"<<endl;
@@ -249,10 +249,9 @@ public:
                 int choice;
                 cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
                 cin>>choice;
-                if (choice ==1)
-                    welcome();
-                else
-                    recOfVeh_2();
+                (choice ==1) ? welcome(): recOfVeh_2();
+      
+     
 
             }
             else{
@@ -260,10 +259,7 @@ public:
                 int choice;
                 cout<<endl<<"Enter 1 to go to home screen and enter 2 for again entering the registration number ";
                 cin>>choice;
-                if (choice ==1)
-                    welcome();
-                else
-                    recOfVeh_2();
+                 (choice ==1) ? welcome(): recOfVeh_2();
             }
         }
 
@@ -381,6 +377,8 @@ public:
             case 3:
                 recOfChall_3();
                 break;
+            default:
+                cout << "please enter a valid case" << endl;
 
         }
         return  0;
